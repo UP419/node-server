@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <title>Node Basics Project</title>
+    </head>
+    <body>
+        <h1>This is about Page</h1>
+        <p>baro baro</p>
+   
+    <%- include('./partials/nav.ejs') %>
+    <div>
+     <%   if(blogs.length > 0){ %>
+      <%      blogs.forEach(blog => { %>
+                <h2><%= blog.author %></h2>
+                <p><%= blog.snippet %></p>
+         <%   })}else{ %>
+            <p>There are no blogs to display</p>
+         <% }  %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
